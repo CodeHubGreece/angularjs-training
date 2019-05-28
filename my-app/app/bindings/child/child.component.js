@@ -7,7 +7,8 @@
             templateUrl: 'app/bindings/child/child.component.html',
             controller: ChildController,
             bindings: {
-                item: '='
+                item: '=',
+                comment: '@'
             }
         });
 

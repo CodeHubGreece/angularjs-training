@@ -14,5 +14,6 @@
         $ctrl.item = {
             count: 1
         };
+        $ctrl.comment = 'Copyright @2019 myApp';
     }
 })();
