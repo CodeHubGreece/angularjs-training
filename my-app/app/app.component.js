@@ -4,7 +4,7 @@
     angular
         .module('myApp')
         .component('myCmp', {
-            templateUrl: '/app.component.html',
+            templateUrl: '/app/app.component.html',
             controller: AppController
         });
 

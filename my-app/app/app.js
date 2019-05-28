@@ -6,6 +6,6 @@
         .run(runBlock);
 
     function runBlock($log) {
-        $log.debug('Hello World');
+        $log.debug('Application started');
     }
 })();

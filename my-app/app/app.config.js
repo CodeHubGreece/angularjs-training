@@ -6,7 +6,8 @@
         .config(configure);
 
     function configure($compileProvider, $logProvider) {
-        $compileProvider.debugInfoEnabled(false);
-        $logProvider.debugEnabled(false);
+        // enable in production
+        // $compileProvider.debugInfoEnabled(false);
+        // $logProvider.debugEnabled(false);
     }
 })();
