@@ -1,4 +1,4 @@
 <div class="parent">
     <h1>Parent value: {{$ctrl.item.count}}</h1>
-    <child-cmp item="$ctrl.item" comment="{{$ctrl.comment}}"></child-cmp>
+    <child-cmp item="$ctrl.item" comment="{{$ctrl.comment}}" on-update="$ctrl.item = item"></child-cmp>
 </div>

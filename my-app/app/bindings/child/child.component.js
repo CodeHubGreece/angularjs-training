@@ -7,8 +7,9 @@
             templateUrl: 'app/bindings/child/child.component.html',
             controller: ChildController,
             bindings: {
-                item: '=',
-                comment: '@'
+                item: '<',
+                comment: '@',
+                onUpdate: '&'
             }
         });
 
@@ -21,6 +22,7 @@
             $ctrl.item = {
                 count: $ctrl.item.count + 1
             };
+            $ctrl.onUpdate({item: $ctrl.item});
         }
     }
 })();
