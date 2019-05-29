@@ -2,4 +2,19 @@
     <h1>Welcome to my-app !</h1>
     <img width="300" alt="AngularJS Logo" src="./content/images/AngularJS-Shield.png">
 </div>
-<parent-cmp></parent-cmp>
+<table>
+    <tr>
+        <td>
+            <parent-cmp></parent-cmp>
+        </td>
+        <td>
+            <init-cmp item="My item"></init-cmp>
+        </td>
+        <td>
+            <changes-cmp item="$ctrl.item"></changes-cmp>
+            <p>
+                <button ng-click="$ctrl.item = $ctrl.item + 1">Update</button>
+            </p>
+        </td>
+    </tr>
+</table>

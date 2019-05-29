@@ -8,5 +8,9 @@
             controller: AppController
         });
 
-    function AppController() {}
+    function AppController() {
+        const $ctrl = this;
+        
+        $ctrl.item = 1;
+    }
 })();
