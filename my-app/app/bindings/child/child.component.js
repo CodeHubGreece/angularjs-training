@@ -13,7 +13,9 @@
             }
         });
 
-    function ChildController() {
+    ChildController.$inject = ['logger'];
+
+    function ChildController(logger) {
         const $ctrl = this;
 
         $ctrl.updateItem = updateItem;
@@ -23,6 +25,7 @@
                 count: $ctrl.item.count + 1
             };
             $ctrl.onUpdate({item: $ctrl.item});
+            logger.info('Item updated');
         }
     }
 })();
