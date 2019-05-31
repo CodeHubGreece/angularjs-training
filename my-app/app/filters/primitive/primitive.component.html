@@ -1,0 +1,27 @@
+<div class="parent">
+    <h1>Primitive filters</h1>
+    <p>
+        <b>Price (default):</b> {{$ctrl.price | currency }}
+    </p>
+    <p>
+        <b>Price:</b> {{$ctrl.price | currency:"€":1 }}
+    </p>
+    <p>
+        <b>Number:</b> {{$ctrl.price | number }}
+    </p>
+    <p>
+        <b>Current date (default):</b> {{$ctrl.today | date }}
+    </p>
+    <p>
+        <b>Current date:</b> {{$ctrl.today | date:'dd/MM/yyyy' }}
+    </p>
+    <p>
+        <b>JSON object:</b> {{$ctrl.obj | json }}
+    </p>
+    <p>
+        <b>Name (uppercase):</b> {{$ctrl.obj.name | uppercase }}
+    </p>
+    <p>
+        <b>Name (lowercase):</b> {{$ctrl.obj.name | lowercase }}
+    </p>
+</div>

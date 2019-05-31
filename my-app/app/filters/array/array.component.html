@@ -1,0 +1,18 @@
+<div class="parent">
+    <h1>Array filters</h1>
+    <p>
+        <b>Filter:</b> {{$ctrl.list | filter:{gender:'male'} }}
+    </p>
+    <p>
+        <b>Filter (exact match):</b> {{$ctrl.list | filter:{gender:'male'}:true }}
+    </p>
+    <p>
+        <b>Limit to 2:</b> {{$ctrl.list | filter:{gender:'male'} | limitTo:2 }}
+    </p>
+    <p>
+        <b>Order by:</b> {{$ctrl.list | filter:{gender:'male'} | orderBy:'name' }}
+    </p>
+    <p>
+        <b>Key value to array:</b> {{$ctrl.person | keyvalue }}
+    </p>
+</div>

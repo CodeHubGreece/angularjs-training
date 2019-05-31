@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('myApp', ['myApp.bindings', 'myApp.hooks']);
+    angular.module('myApp', ['myApp.bindings', 'myApp.hooks', 'myApp.filters']);
 })();
