@@ -11,11 +11,15 @@
 <body>
   <my-cmp></my-cmp>
   <script src="./lib/angular.min.js"></script>
+  <script src="./lib/angular-resource.min.js"></script>
   
   <script src="./app/app.module.js"></script>
   <script src="./app/app.config.js"></script>
   <script src="./app/app.js"></script>
   <script src="./app/app.component.js"></script>
+
+  <script src="./app/core/core.module.js"></script>
+  <script src="./app/core/core.constants.js"></script>
 
   <script src="./app/bindings/bindings.module.js"></script>
   <script src="./app/bindings/parent/parent.component.js"></script>
@@ -33,5 +37,10 @@
 
   <script src="./app/services/services.module.js"></script>
   <script src="./app/services/logger.js"></script>
+
+  <script src="./app/todos/todos.module.js"></script>
+  <script src="./app/todos/todo-list/todo-list.component.js"></script>
+  <script src="./app/todos/todo-detail/todo-detail.component.js"></script>
+  <script src="./app/todos/todos.service.js"></script>
 </body>
 </html>
