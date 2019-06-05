@@ -7,6 +7,7 @@
         'myApp.hooks',
         'myApp.filters',
         'myApp.services',
-        'myApp.todos'
+        'myApp.todos',
+        'myApp.directives'
     ]);
 })();
