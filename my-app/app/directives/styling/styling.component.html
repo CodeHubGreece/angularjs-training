@@ -1,0 +1,10 @@
+<div class="parent">
+    <h1>Styling</h1>
+    <p>
+        <input type="checkbox" ng-click="$ctrl.isEnabled = !$ctrl.isEnabled" />Toggle edit
+    </p>
+    <p>
+        <input ng-style="{'background-color': $ctrl.getColor()}" ng-disabled="!$ctrl.isEnabled" value="With style" readonly />
+        <input ng-class="{'pf-enabled': $ctrl.isEnabled, 'pf-disabled': !$ctrl.isEnabled}" ng-disabled="!$ctrl.isEnabled" value="With class" readonly/>
+    </p>
+</div>

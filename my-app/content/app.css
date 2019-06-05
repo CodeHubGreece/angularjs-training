@@ -19,3 +19,11 @@ div:not(.child):not(.parent) {
 td {
     padding: 15px;
 }
+
+.pf-enabled {
+    background-color: green;
+}
+
+.pf-disabled {
+    background-color: red;
+}
