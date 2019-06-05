@@ -16,7 +16,7 @@
             { name: 'Jackie', gender: 'female' },
             { name: 'Mary', gender: 'female' },
             { name: 'Adam', gender: 'male' }
-        ]
+        ];
         $ctrl.person = {
             name: 'John',
             age: 24,
