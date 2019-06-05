@@ -1,0 +1,8 @@
+<div class="parent">
+    <h1>Simple form</h1>
+    <form novalidate>
+        <input ng-model="$ctrl.user" />
+        <button ng-click="$ctrl.submit()">Add user</button>
+        <p ng-repeat="user in $ctrl.users">{{user}}</p>
+    </form>
+</div>

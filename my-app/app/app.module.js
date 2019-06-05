@@ -8,6 +8,7 @@
         'myApp.filters',
         'myApp.services',
         'myApp.todos',
-        'myApp.directives'
+        'myApp.directives',
+        'myApp.forms'
     ]);
 })();
