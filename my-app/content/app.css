@@ -27,3 +27,15 @@ td {
 .pf-disabled {
     background-color: red;
 }
+
+.pf-error {
+    color: red;
+}
+
+input.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border: none;
+}

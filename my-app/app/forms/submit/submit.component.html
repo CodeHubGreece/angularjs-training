@@ -1,0 +1,10 @@
+<div class="parent">
+    <h1>Submit form</h1>
+    <form name="myForm" ng-if="!$ctrl.submitted" ng-submit="myForm.$valid && $ctrl.submit()" novalidate>
+        <input ng-model="$ctrl.user" name="myCtrl" minlength="3" required />
+        <button>Add user</button>
+        <p class="pf-error" ng-show="myForm.myCtrl.$error.required && myForm.$submitted">User is required</p>
+        <p class="pf-error" ng-show="myForm.myCtrl.$error.minlength && myForm.$submitted">User should be greater than 3 chars long</p>
+        <p ng-repeat="user in $ctrl.users">{{user}}</p>
+    </form>
+</div>

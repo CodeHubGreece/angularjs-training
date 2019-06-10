@@ -15,7 +15,14 @@
         $ctrl.user = '';
         $ctrl.submit = submit;
 
-        function submit() {
+        function submit(form) {
+            if (form.$invalid) {
+                return;
+            }
+            
+            form.$setPristine();
+            form.$setUntouched();
+
             $ctrl.users.push($ctrl.user);
             $ctrl.user = '';
         }
