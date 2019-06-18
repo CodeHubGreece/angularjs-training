@@ -1,4 +1,6 @@
 <div class="child">
     <h3>Users</h3>
-    <p ng-repeat="user in $ctrl.users">{{user}}</p>
+    <p ng-repeat="user in $ctrl.users">
+        <a ui-sref="userDetail({id: user.id})">{{user.name}}</a>
+    </p>
 </div>
