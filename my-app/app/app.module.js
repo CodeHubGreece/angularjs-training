@@ -10,6 +10,7 @@
         'myApp.todos',
         'myApp.directives',
         'myApp.forms',
-        'myApp.routing'
+        'myApp.routing',
+        'myApp.security'
     ]);
 })();
