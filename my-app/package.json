@@ -15,6 +15,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/angular": "1.6.54",
+    "@types/angular-resource": "1.5.15",
+    "@types/angular-sanitize": "1.7.0",
+    "@types/angular-mocks": "1.7.0",
+    "@types/angular-ui-router": "1.1.40",
     "jasmine-core": "^3.4.0",
     "karma": "^4.1.0",
     "karma-chrome-launcher": "^2.2.0",

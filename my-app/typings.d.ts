@@ -1,1 +1,4 @@
-declare var angular: any;
+declare global {
+  const angular: ng.IAngularStatic;
+}
+export {};
