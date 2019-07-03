@@ -7,7 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "tsc": "tsc",
+    "tsc:watch": "tsc -w"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
     "karma": "^4.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.2"
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "typescript": "^3.5.2"
   }
 }
