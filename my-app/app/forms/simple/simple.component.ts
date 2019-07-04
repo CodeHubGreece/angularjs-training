@@ -1,30 +1,23 @@
-(function() {
-    'use strict';
+class SimpleFormController {
+    users = [];
+    user = '';
 
-    angular
-        .module('myApp.forms')
-        .component('simpleCmp', {
-            templateUrl: 'app/forms/simple/simple.component.html',
-            controller: SimpleFormController
-        });
-
-    function SimpleFormController() {
-        const $ctrl = this;
-
-        $ctrl.users = [];
-        $ctrl.user = '';
-        $ctrl.submit = submit;
-
-        function submit(form) {
-            if (form.$invalid) {
-                return;
-            }
-            
-            form.$setPristine();
-            form.$setUntouched();
-
-            $ctrl.users.push($ctrl.user);
-            $ctrl.user = '';
+    submit(form: angular.IFormController) {
+        if (form.$invalid) {
+            return;
         }
+        
+        form.$setPristine();
+        form.$setUntouched();
+
+        this.users.push(this.user);
+        this.user = '';
     }
-})();
+}
+
+angular
+    .module('myApp.forms')
+    .component('simpleCmp', {
+        templateUrl: 'app/forms/simple/simple.component.html',
+        controller: SimpleFormController
+    });

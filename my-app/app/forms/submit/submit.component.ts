@@ -1,29 +1,23 @@
-(function() {
-    'use strict';
+class SubmitFormController {
+    
+    constructor(private $timeout: angular.ITimeoutService) {}
 
-    angular
-        .module('myApp.forms')
-        .component('submitCmp', {
-            templateUrl: 'app/forms/submit/submit.component.html',
-            controller: SubmitFormController
-        });
+    users = [];
+    user = '';
+    submitted = false;
 
-    SubmitFormController.$inject = ['$timeout'];
+    submit() {
+        this.submitted = true;
+        this.users.push(this.user);
+        this.user = '';
 
-    function SubmitFormController($timeout) {
-        const $ctrl = this;
-
-        $ctrl.users = [];
-        $ctrl.user = '';
-        $ctrl.submit = submit;
-        $ctrl.submitted = false;
-
-        function submit() {
-            $ctrl.submitted = true;
-            $ctrl.users.push($ctrl.user);
-            $ctrl.user = '';
-
-            $timeout(() => $ctrl.submitted = false);
-        }
+        this.$timeout(() => this.submitted = false);
     }
-})();
+}
+
+angular
+    .module('myApp.forms')
+    .component('submitCmp', {
+        templateUrl: 'app/forms/submit/submit.component.html',
+        controller: SubmitFormController
+    });
