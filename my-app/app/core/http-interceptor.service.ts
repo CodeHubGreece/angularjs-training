@@ -1,32 +1,24 @@
-(function() {
-    'use strict';
+class HttpInterceptor {
 
-    angular
-        .module('myApp.core')
-        .service('httpInterceptor', HttpInterceptor);
+    constructor(private $q: angular.IQService) {}
 
-    HttpInterceptor.$inject = ['$q'];
-    
-    function HttpInterceptor($q) {
-        this.request = handleRequest;
-        this.response = handleResponse;
-        this.requestError = handleReqError;
-        this.responseError = handleRespError;
-
-        function handleRequest(config) {
-            return config;
-        }
-
-        function handleResponse(response) {
-            return response;
-        }
-
-        function handleReqError(rejection) {
-            return $q.reject(rejection);
-        }
-
-        function handleRespError(rejection) {
-            return $q.reject(rejection);
-        }
+    request(config: angular.IRequestConfig): angular.IRequestConfig {
+        return config;
     }
-})();
+
+    requestError(rejection: any) {
+        return this.$q.reject(rejection);
+    }
+
+    response(response: angular.IHttpResponse<any>) {
+        return response;
+    }
+
+    responseError(rejection: any) {
+        return this.$q.reject(rejection);
+    }
+}
+
+angular
+    .module('myApp.core')
+    .service('httpInterceptor', HttpInterceptor);

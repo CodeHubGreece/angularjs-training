@@ -1,37 +1,27 @@
-(function() {
-    'use strict';
+class EventsController {
+    
+    constructor(private $log: angular.ILogService) {}
 
-    angular
-        .module('myApp.directives')
-        .component('eventsCmp', {
-            templateUrl: 'app/directives/events/events.component.html',
-            controller: EventsController
-        });
-
-    EventsController.$inject = ['$log'];
-
-    function EventsController($log) {
-        const $ctrl = this;
-
-        $ctrl.onBlur = blur;
-        $ctrl.onClick = click;
-        $ctrl.onKeyPress = keypress;
-        $ctrl.onMouseOver = mouseover;
-
-        function blur() {
-            $log.debug('Blur event fired');
-        }
-
-        function click() {
-            $log.debug('Button clicked');
-        }
-
-        function keypress(event) {
-            $log.debug('Key pressed: ' + event.key);
-        }
-
-        function mouseover(event) {
-            $log.debug('Mouse coordinates ' + event.screenX + ' ' + event.screenY);
-        }
+    onBlur() {
+        this.$log.debug('Blur event fired');
     }
-})();
+
+    onClick() {
+        this.$log.debug('Button clicked');
+    }
+
+    onKeyPress(event: JQuery.KeyPressEvent) {
+        this.$log.debug('Key pressed: ' + event.key);
+    }
+
+    onMouseOver(event: JQuery.MouseOverEvent) {
+        this.$log.debug('Mouse coordinates ' + event.screenX + ' ' + event.screenY);
+    }
+}
+
+angular
+    .module('myApp.directives')
+    .component('eventsCmp', {
+        templateUrl: 'app/directives/events/events.component.html',
+        controller: EventsController
+    });

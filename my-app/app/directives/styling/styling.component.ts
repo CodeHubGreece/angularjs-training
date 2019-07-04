@@ -1,21 +1,14 @@
-(function() {
-    'use strict';
+class StylingController {
+    isEnabled = true;
 
-    angular
-        .module('myApp.directives')
-        .component('stylingCmp', {
-            templateUrl: 'app/directives/styling/styling.component.html',
-            controller: StylingController
-        });
-
-    function StylingController() {
-        const $ctrl = this;
-
-        $ctrl.isEnabled = true;
-        $ctrl.getColor = getColor;
-
-        function getColor() {
-            return $ctrl.isEnabled ? 'white' : 'lightgray';
-        }
+    getColor() {
+        return this.isEnabled ? 'white' : 'lightgray';
     }
-})();
+}
+
+angular
+    .module('myApp.directives')
+    .component('stylingCmp', {
+        templateUrl: 'app/directives/styling/styling.component.html',
+        controller: StylingController
+    });

@@ -1,17 +1,11 @@
-(function() {
-    'use strict';
+class BooleanController {
+    isChecked = true;
+    allowEdit = true;
+}
 
-    angular
-        .module('myApp.directives')
-        .component('boolCmp', {
-            templateUrl: 'app/directives/boolean/boolean.component.html',
-            controller: BooleanController
-        });
-
-    function BooleanController() {
-        const $ctrl = this;
-
-        $ctrl.isChecked = true;
-        $ctrl.allowEdit = true;
-    }
-})();
+angular
+    .module('myApp.directives')
+    .component('boolCmp', {
+        templateUrl: 'app/directives/boolean/boolean.component.html',
+        controller: BooleanController
+    });
